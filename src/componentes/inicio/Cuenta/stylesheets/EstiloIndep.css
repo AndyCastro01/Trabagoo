@@ -1,0 +1,61 @@
+.verticalLine {
+    display: flex;
+    
+    border-left: 2px solid rgb(51, 49, 51);
+    height: 500px;
+    position: absolute;
+    left: 13%;
+    margin-left: -3px;
+    top: 70px;
+  }
+  
+.barIz{
+   margin-top: 60px;
+   margin-left: 10px;
+    width: 150px;
+}
+
+.Letras{
+    margin-top: -350px;
+    margin-left: 200px;
+}
+
+.text{
+    margin-left: 200px;
+}
+
+.mish .Cat{
+    margin-top: -200px;
+    margin-left: 1000px;
+    width: 350px;
+   height: 350px;
+}
+
+.mish .pc{
+    margin-top: -200px;
+    margin-left: 200px;
+    width: 150px;
+   height: 150px;
+}
+
+.mish .targeta{
+    margin-top: -200px;
+    margin-left: 100px;
+    width: 150px;
+   height: 150px;
+}
+
+.mish .escudo{
+    margin-top: -250px;
+    margin-left: 750px;
+    width: 150px;
+   height: 150px;
+}
+
+
+.TablitaPed{
+margin-top: 0px;
+margin-left: 200px;
+}
+
+
