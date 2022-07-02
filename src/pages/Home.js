@@ -5,12 +5,19 @@ import ListaCard from './Productos_Presentacion/producto_Card';
 import './home.css';
 import Example from './slid'
 
+
 function home() {
 
     return (
         <div>
             <br></br>
-            <h1 class="display-4" ><center >Bienvenido a TrabaGo</center></h1>
+            <div>
+                       <p className="tituele"><a className="atitu">
+                      Bienvenido  a  TrabaGo
+                    </a></p>
+                    </div><br></br>
+                    
+           
             <br></br>
             <br></br>
             <br></br>
@@ -47,18 +54,97 @@ function home() {
                
 
                 <br></br>
-                
-
-                
-                   
-
-                      
                         
                    
                 
             </div>
 
-            
+        
+
+        
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">   Ir   </a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">Ir</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">Ir</a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+<br></br> <br></br> <br></br> <br></br> <br></br>
+
+
+
+   
+<section id="gallery">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">   Ir   </a>
+      </div>
+     </div>
+    </div>
+  <div class="col-lg-4 mb-4">
+  <div class="card">
+      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">Ir</a>
+      </div>
+      </div>
+    </div>
+    <div class="col-lg-4 mb-4">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">Sunset</h5>
+        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
+       <a href="" class="btn btn-outline-success btn-sm">Ir</a>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<br></br> <br></br> <br></br> <br></br> <br></br>
+
+
+
 
             <div class="card text-center">
                 <div class="card-header">

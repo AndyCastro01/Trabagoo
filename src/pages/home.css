@@ -1,4 +1,164 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+
+
+.card-header{
+    background: linear-gradient(to right, #2d2d2d,#2d2d2d);   width: 100%;
+    color: white;
+}
+
+.card-footer{
+    background: linear-gradient(to right, #2d2d2d,#2d2d2d);   width: 100%;
+    color: white;
+}
+
+  /*neon effect*/
+  .tituele{
+    text-align:center;
+    font-size:60px;
+    margin:20px 0 20px 0;
+  }
+  
+  .atitu{
+    text-decoration:none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+  p:nth-child(1) a{
+    color:hsl(61, 100%, 50%);
+    font-family:Monoton;
+  }
+  p:nth-child(1) a:hover{
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(2) a{
+    font-size:1.5em;
+    color:#228DFF;
+    font-family:Iceland;
+  }
+  p:nth-child(2) a:hover{
+    -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;
+    animation: neon2 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(3) a{
+    color:#FFDD1B;
+    font-family:Audiowide;
+  }
+  p:nth-child(3) a:hover{
+    -webkit-animation: neon3 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon3 1.5s ease-in-out infinite alternate;
+    animation: neon3 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(4) a{
+    color:#FF9900;
+    font-family:Pacifico;
+  }
+  p:nth-child(4) a:hover{
+    -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+    animation: neon4 1.5s ease-in-out infinite alternate;
+  }
+  
+  p:nth-child(5) a{
+    color:#BA01FF;
+    font-family:Vampiro One;
+  }
+  p:nth-child(5) a:hover{
+    -webkit-animation: neon5 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon5 1.5s ease-in-out infinite alternate;
+    animation: neon5 1.5s ease-in-out infinite alternate;
+  }
+  
+  p a:hover{
+  color:#ffffff;
+  }
+  
+  
+  
+  /*glow for webkit-ket-frames*/
+  @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff,
+                 0 0 20px  #fff,
+                 0 0 30px  #fff,
+                 0 0 40px  #FF1177,
+                 0 0 70px  #FF1177,
+                 0 0 80px  #FF1177,
+                 0 0 100px #FF1177,
+                 0 0 150px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px #fff,
+                 0 0 15px #fff,
+                 0 0 20px #FF1177,
+                 0 0 35px #FF1177,
+                 0 0 40px #FF1177,
+                 0 0 50px #FF1177,
+                 0 0 75px #FF1177;
+    }
+  }
+  
+  
+  /*glow for mozilla-keyframes*/
+  @-moz-keyframes neon1 {
+    from {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px  #fff,
+                 0 0 15px  #fff,
+                 0 0 20px  #FF1177,
+                 0 0 35px  #FF1177,
+                 0 0 40px  #FF1177,
+                 0 0 50px #FF1177,
+                 0 0 75px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 2.5px #fff,
+                 0 0 5px #fff,
+                 0 0 7.5px #fff,
+                 0 0 10px #FF1177,
+                 0 0 17.5px #FF1177,
+                 0 0 20px #FF1177,
+                 0 0 25px #FF1177,
+                 0 0 37.5px #FF1177;
+    }
+  }
+  
+  
+  /*glow*/
+  @keyframes neon1 {
+    from {
+      text-shadow: 0 0 5px #fff,
+                 0 0 10px  #fff,
+                 0 0 15px  #fff,
+                 0 0 20px  #FF1177,
+                 0 0 35px  #FF1177,
+                 0 0 40px  #FF1177,
+                 0 0 50px #FF1177,
+                 0 0 75px #FF1177;
+    }
+    to {
+      text-shadow: 0 0 2.5px #fff,
+                 0 0 5px #fff,
+                 0 0 7.5px #fff,
+                 0 0 10px #FF1177,
+                 0 0 17.5px #FF1177,
+                 0 0 20px #FF1177,
+                 0 0 25px #FF1177,
+                 0 0 37.5px #FF1177;
+    }
+  }
+
+
+
 .t3xt{
     font-family: 'Quicksand', sans-serif;
     background: linear-gradient(to right, #cc1d3d80,#5ee162b4);   
@@ -27,3 +187,16 @@
 .imge-B{
     margin-left: -30px;
  }
+
+ .Tarjetas{
+  width:20rem;
+ }
+
+ .card-title{
+     color:aqua;
+ }
+
+ .card-text{
+    color:aliceblue;
+ }
+ 
