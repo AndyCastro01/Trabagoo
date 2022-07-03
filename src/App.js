@@ -10,7 +10,7 @@ import Formulario from './componentes/Formularios/Registrate';
 import Login from './componentes/Formularios/Iniciar Sesion';
 import Nosotros from './pages/About Us';
 
-import shipp from './componentes/inicio/shipp';
+
 import Blog from './componentes/Blog/src/containers/App.js';
 
 import Servicios from './componentes/inicio/Servicios';
@@ -63,7 +63,7 @@ function App() {
         <Route path='/micuenta' exact component={micuenta}/>
         <Route path='/About Us' exact component={Nosotros} />
         
-        <Route path='/shipp' exact component={shipp} />
+        
         <Route path='/Electronicos' exact component={Electronicos} />
         <Route path='/Laple' exact component={Laple} />
         <Route path='/Delap' exact component={Delap} />

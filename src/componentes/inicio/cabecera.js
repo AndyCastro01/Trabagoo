@@ -3,7 +3,7 @@ import React, {Component} from 'react'
 
 
 export const Navbar = () =>{
-    export const Navbar=() => {
+    const Navbar=() => {
         const hidden = () =>{
             const menu = document.querySelector('#navbarSupportedContent');
             menu.ClassList.toogle('none')

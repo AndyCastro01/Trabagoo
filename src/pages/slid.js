@@ -10,8 +10,8 @@ import {
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import img1  from '../imagenes_Slide/promo.png';
-import img2 from '../imagenes_Slide/fondo3.png';
-import img3 from '../imagenes_Slide/fondo2.png';
+import img2 from '../imagenes_Slide/fondo3.jpg';
+import img3 from '../imagenes_Slide/fondo2.jpg';
 
 const items = [
   {
