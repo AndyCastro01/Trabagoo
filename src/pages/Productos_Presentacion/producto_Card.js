@@ -4,7 +4,7 @@ class ListaCard extends Component {
     render() {
         return (
 
-            <div className="container">
+            <div className="container row">
                 <div className="card1" style={{ color: 'yellow' }}>
                     <div className="Imgprin">
                         <img src="img/Productos Amazon/Dot.jpg" className="card-img-top" />
