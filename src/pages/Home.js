@@ -34,10 +34,10 @@ function home() {
                 alt="..."
                 className="imge-c"
                 width="450px"
-                height="236px"
+                height="210px"
               />
             </div>
-            <div className="col-md-8 txt-card">
+            <div className="col md6 txt-card">
               <div className="card-body">
                 <h5 className="card-title txt-card">
                   <b>TrabaGo Te ayuda a buscar empleo </b>
