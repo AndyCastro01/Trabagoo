@@ -15,15 +15,12 @@ import Blog from './componentes/Blog/src/containers/App.js';
 
 import Servicios from './componentes/inicio/Servicios';
 import micuenta  from './componentes/inicio/Cuenta/components/miCuenta';
-import Electronicos from './pages/Categorias/Electronicos';
-import Laple from './pages/Categorias/Electronicos/Laple';
-import Delap from './pages/Categorias/Electronicos/Delap';
-import Aiph from './pages/Categorias/Electronicos/Aiph';
-import Redmin10 from './pages/Categorias/Electronicos/Redmin10';
-import Xp3 from './pages/Categorias/Electronicos/Xp3';
-import Sagat from './pages/Categorias/Electronicos/Sagat';
-import ssd from './pages/Categorias/Electronicos/ssd';
-import Muebles from './pages/Categorias/Muebles';
+import Electricidad from './pages/Categorias/Electricidad';
+import Elec1 from './pages/Categorias/Electricidad/Elec1';
+import Elec2 from './pages/Categorias/Electricidad/Elec2';
+
+import Elec3 from './pages/Categorias/Electricidad/Elec3';
+
 import Saes from './pages/Categorias/Muebles/Saes';
 import Saesmi from './pages/Categorias/Muebles/Saesmi';
 import Juco from './pages/Categorias/Muebles/Juco';
@@ -64,15 +61,13 @@ function App() {
         <Route path='/About Us' exact component={Nosotros} />
         
         
-        <Route path='/Electronicos' exact component={Electronicos} />
-        <Route path='/Laple' exact component={Laple} />
-        <Route path='/Delap' exact component={Delap} />
-        <Route path='/Aiph' exact component={Aiph} />
-        <Route path='/Redmin10' exact component={Redmin10} />
-        <Route path='/Xp3' exact component={Xp3} />
-        <Route path='/Sagat' exact component={Sagat} />
-        <Route path='/ssd' exact component={ssd} />
-        <Route path='/Muebles' exact component={Muebles} />
+        <Route path='/Electricidad' exact component={Electricidad} />
+        <Route path='/Elec1' exact component={Elec1} />
+        <Route path='/Elec2' exact component={Elec2} />
+        
+        <Route path='/Elec3' exact component={Elec3} />
+   
+     
         <Route path='/Saes' exact component={Saes} />
         <Route path='/Saesmi' exact component={Saesmi} />
         <Route path='/Juco' exact component={Juco} />
