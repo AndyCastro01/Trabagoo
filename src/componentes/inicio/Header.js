@@ -177,7 +177,7 @@ class Header extends Component {
 
             <ul className="dropdown-menu">
               <li>
-                <Link class="dropdown-item" to="#">
+                <Link class="dropdown-item" to="/micuenta">
                   <label>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ import Example from "./slid";
 
 function home() {
   return (
-    <div>
+    <div className="color">
       <br></br>
       <div>
         <p className="tituele">
@@ -82,7 +82,7 @@ function home() {
                     mejor talento, queremos invitarle a participar en el proceso
                     de Reclutamiento como candidato para esta posición.
                   </p>
-                  <a href="" class="btn btn-outline-success btn-sm">
+                  <a href="/Electricidad" class="btn btn-outline-success btn-sm">
                     {" "}
                     Ir{" "}
                   </a>
@@ -102,7 +102,7 @@ function home() {
                     Buscamos plomero-electricista con experiencia para trabajos
                     en obra y mantenimientos para trabajo fijo.
                   </p>
-                  <a href="" class="btn btn-outline-success btn-sm">
+                  <a href="/e" class="btn btn-outline-success btn-sm">
                     Ir
                   </a>
                 </div>
@@ -203,10 +203,7 @@ function home() {
           </div>
         </div>
       </section>
-
-      
       <br></br> <br></br> <br></br> <br></br> <br></br>
-      
       <div className="card text-center row">
         <div className="card-header col s4 m4">
           TravaGo, el trabajo siempre cerca de ti

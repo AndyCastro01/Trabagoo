@@ -173,10 +173,7 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.card-body 
-{ 
-    background-color:#2d2d2d; 
-}
+
 .txt-card{
     color: white;
 }
@@ -193,10 +190,12 @@
  }
 
  .card-title{
-     color:aqua;
+  color: black;
+  text-shadow: 2px 2px 3px blue;
+  font-size: 20px;
  }
 
  .card-text{
-    color:aliceblue;
+    color:#f70404;
  }
  

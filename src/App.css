@@ -26,12 +26,15 @@ body{
 .pres{
   margin-top:-20px;
   }
+  
   .backC{
     background-image: linear-gradient(to right  , #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%,#f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
   }
+
   .logBack{
     background-size: cover;
-    background-image: url(./componentes/Formularios/Imagenes_fondo/fondo3.jpg);
+    background-image: linear-gradient(to right  , #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%,#f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
+
   }
 
 .objetfit > img{
@@ -40,6 +43,9 @@ body{
 	object-fit: none;
 	background-color: black;
 	border: 3px solid #ff9daa;
+}
+.color .card{
+  background-color: black;
 }
 
 .fondo{
@@ -362,10 +368,7 @@ a{
   .backC{
     background-image: linear-gradient(to right  , #de9c2c 0, #e5922a 8.33%, #ea852b 16.67%, #ee772d 25%, #f16731 33.33%, #f35436 41.67%,#f23c3c 50%, #f01843 58.33%, #ed004c 66.67%, #e90057 75%, #e30064 83.33%, #db0071 91.67%, #d10080 100%);
   }
-  .logBack{
-    background-size: cover;
-    background-image: url(./componentes/Formularios/Imagenes_fondo/fondo3.jpg);
-  }
+
 
 .objetfit > img{
 	width: 200px;
@@ -837,3 +840,16 @@ a{
                  0 0 37.5px #FF1177;
     }
   }
+
+  .formulario .card{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.colocar1 .colocar{
+  width: 33.33%;
+}
+
+.color-carta{
+  background: linear-gradient(to right, #08aa3e,#f6f6f6,#ff0000);   width: 100%;
+}

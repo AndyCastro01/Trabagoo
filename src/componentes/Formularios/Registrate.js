@@ -1,235 +1,177 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styleH.css";
 
-class formulario extends Component {
-  render() {
-    return (
-      <div className="container-fluid fondo">
-        <div className="card container-fluid col-md-4 logBack">
-          <div className="caja">
-            <h3 class="text-center">Registrarse en TrabaGo</h3>
-          </div>
+import Axios from "../services/ConexionAxios";
 
-          <div className="card-body container-fluid">
-            <a for="">Nombre(s)</a>
-            <form action="#" className="form-floating ">
-              <div class="input-group label-float mb-3">
-                <input
-                  tcd
-                  cdype="email"
-                  className="form-control"
-                  placeholder=" "
-                  required
-                />
-                <label>Nombre y usuario</label>
-                <span class="input-group-text" id="inputGroupPrepend">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-person-check-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M15.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L12.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"
-                    />
-                    <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                  </svg>
+function Formulario() {
+  const variablesInicio = {
+    clave: " ",
+    contraseña:"",
+    nombre: " ",
+    apellidos: " ",
+    ocupacion: " ",
+    telefono: " ",
+    sexo: "",
+    email: " ",
+  };
+
+  const [values, setValues] = useState(variablesInicio);
+
+  const CambioEstado = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  //Crear metodo para guardar información
+  const Guardar = async () => {
+    Axios.post("/persona/guardar", {
+      clave: values.clave,
+      contraseña: values.contraseña,
+      nombre: values.nombre,
+      apellidos: values.apellidos,
+      ocupacion:values.ocupacion,
+      telefono: values.telefono,
+      sexo: values.sexo,
+      email: values.email,
+    }).then(() => {
+      console.log("Registro guardado con exito");
+    });
+  };
+
+  const Enviar = (e) => {
+    e.preventDefault();
+    Guardar();
+  };
+
+  return (
+    <div className="formulario container-fluid p-4 fondo">
+      <div className="card col-md-4 logBack">
+        <div class="llamada card-header text-center">Formulario de personas</div>
+        <div class="card-body">
+          <p class="card-text">
+            <form className="colocar1" onSubmit={Enviar}>
+              <br />
+              <label for="exampleFormControlInput1" class="form-label">
+                Crear username
+              </label>
+              <div class="mb-3 input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">
+                  @
                 </span>
                 <input
                   type="text"
                   class="form-control"
-                  id="validationCustomUsername"
-                  aria-describedby="inputGroupPrepend"
-                  required
+                  id="exampleFormControlInput1"
+                  name="clave"
+                  value={values.clave}
+                  onChange={CambioEstado}
+                  placeholder="Cree un Username"
                 />
-                <div class="invalid-feedback">Por favor ingrese un usuario</div>
               </div>
 
-              <div className="input-group label-float mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder=" "
-                  aria-label="Username"
-                />
-                <label>Apellido(s)</label>
-                <span className="input-group-text">-</span>
-                <input
-                  type="text"
-                  className="form-control aaa"
-                  placeholder=" "
-                  aria-label="Server"
-                />
-              </div>
-              <div className="input-group label-float mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder=" "
-                  aria-label="Email"
-                />
-                <label>Correo Electronico: </label>
-              </div>
-
-              <div className="input-group label-float mb-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  id="address"
-                  required=""
-                  placeholder=" "
-                  aria-label="Email"
-                />
-                <label for="address">Direccion :</label>
-              </div>
-
-              <a>Genero:</a>
-              <div className="form-check">
-                <input
-                  className="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
-                <label className="form-check-label" for="flexRadioDefault1">
-                  Masculino
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Nombre
                 </label>
-              </div>
-              <div className="form-check">
                 <input
-                  className="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault2"
-                  checked
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="nombre"
+                  value={values.nombre}
+                  onChange={CambioEstado}
+                  placeholder="nombre de la persona"
                 />
-                <label className="form-check-label" for="flexRadioDefault2">
-                  Femenino
+              </div>
+              
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Apellidos
                 </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="apellidos"
+                  value={values.apellidos}
+                  onChange={CambioEstado}
+                  placeholder="Ingresa los apellidos"
+                />
               </div>
 
-              <form className="row g-3 needs-validation" novalidate>
-                <div className="col-md-4">
-                  <label for="validationCustom03" className="form-label">
-                    Ciudad
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="validationCustom03"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Porfavor ingrese una ciudad valida.
-                  </div>
-                </div>
-                <div className="col-md-2 estado">
-                  <label for="validationCustom04" className="form-label">
-                    Estado
-                  </label>
-                  <select
-                    className="form-select"
-                    id="validationCustom04"
-                    required
-                  >
-                    <option selected disabled value="">
-                      Buscar...
-                    </option>
-                    <option value="Aguascalientes">Aguascalientes</option>
-                    <option value="Baja California">Baja California</option>
-                    <option value="Baja California Sur">
-                      Baja California Sur
-                    </option>
-                    <option value="Campeche">Campeche</option>
-                    <option value="Chiapas">Chiapas</option>
-                    <option value="Chihuahua">Chihuahua</option>
-                    <option value="CDMX">Ciudad de México</option>
-                    <option value="Coahuila">Coahuila</option>
-                    <option value="Colima">Colima</option>
-                    <option value="Durango">Durango</option>
-                    <option value="Estado de México">Estado de México</option>
-                    <option value="Guanajuato">Guanajuato</option>
-                    <option value="Guerrero">Guerrero</option>
-                    <option value="Hidalgo">Hidalgo</option>
-                    <option value="Jalisco">Jalisco</option>
-                    <option value="Michoacán">Michoacán</option>
-                    <option value="Morelos">Morelos</option>
-                    <option value="Nayarit">Nayarit</option>
-                    <option value="Nuevo León">Nuevo León</option>
-                    <option value="Oaxaca">Oaxaca</option>
-                    <option value="Puebla">Puebla</option>
-                    <option value="Querétaro">Querétaro</option>
-                    <option value="Quintana Roo">Quintana Roo</option>
-                    <option value="San Luis Potosí">San Luis Potosí</option>
-                    <option value="Sinaloa">Sinaloa</option>
-                    <option value="Sonora">Sonora</option>
-                    <option value="Tabasco">Tabasco</option>
-                    <option value="Tamaulipas">Tamaulipas</option>
-                    <option value="Tlaxcala">Tlaxcala</option>
-                    <option value="Veracruz">Veracruz</option>
-                    <option value="Yucatán">Yucatán</option>
-                    <option value="Zacatecas">Zacatecas</option>
-                  </select>
-                  <div className="invalid-feedback">
-                    Porfavor selecccione un estado valido.
-                  </div>
-                </div>
-
-                <div className="col-md-3 codigo">
-                  <label for="validationCustom05" className="form-label">
-                    Código
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="validationCustom05"
-                    required
-                  />
-                  <div className="invalid-feedback">
-                    Por favor ingrése un código postal valido.
-                  </div>
-                </div>
-
-                <div className="col-12">
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="invalidCheck"
-                      required
-                    />
-                    <label className="form-check-label" for="invalidCheck">
-                      Acepto los términos y condiciones
-                    </label>
-                    <div className="invalid-feedback">
-                      Tu has sido registrado correctamente seras redirigido
-                    </div>
-                  </div>
-                </div>
-              </form>
-
-              <br></br>
-              <br></br>
-              <div className="text-center ">
-                <button type="submit" className="btn btn-danger btn-lg">
-                  Registrarse
-                </button>
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Ocupacion/Empleo
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="ocupacion"
+                  value={values.ocupacion}
+                  onChange={CambioEstado}
+                  placeholder="Empleo de la persona"
+                />
               </div>
-              <br></br>
-            </form>
-            <label className="forgot-password text-left ">
-              <Link to="./Iniciar Sesion">Ya tengo un usuario</Link>
-            </label>
-          </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Teléfono
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="telefono"
+                  value={values.telefono}
+                  onChange={CambioEstado}
+                  placeholder="Ingresa el numero telefonico"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="email"
+                  value={values.email}
+                  onChange={CambioEstado}
+                  placeholder=""
+                />
+              </div>
+
+
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">
+                  Contraseña
+                </label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleFormControlInput1"
+                  name="contraseña"
+                  value={values.contraseña}
+                  onChange={CambioEstado}
+                  placeholder="Cree una contraseña"
+                />
+              </div>
+
+              <button type="submit" className="colocar btn btn-primary" >
+                Enviar
+              </button>
+            </form>            
+          </p>
+          <Link to="./Iniciar Sesion">Ya tengo un usuario</Link>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
-export default formulario;
+export default Formulario;
