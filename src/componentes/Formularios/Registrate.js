@@ -35,9 +35,10 @@ function Formulario() {
       sexo: values.sexo,
       email: values.email,
     }).then(() => {
-      console.log("Registro guardado con exito");
+      console.log('Registro guardado con exito');
     });
-  };
+   setValues(variablesInicio);
+  }
 
   const Enviar = (e) => {
     e.preventDefault();

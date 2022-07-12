@@ -5,7 +5,7 @@ class Header extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg  navbar-light bg- ">
+        <nav className="navbar navbar-expand-lg  navbar-light bg- sm-4 m-3">
           <Link className="navbar-brand" to="/">
             <img src="/img/logo2.png" />
           </Link>
@@ -32,8 +32,8 @@ class Header extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/About Us">
-                  Acerca de
+                <Link className="nav-link" to="/Publicate">
+                  Publicate
                 </Link>
               </li>
 
@@ -140,9 +140,7 @@ class Header extends Component {
                 </ul>
               </div>
             </ul>
-          </div>
-
-          <Link
+            <Link
             className="btn btn-primary ml-4"
             to="/Iniciar Sesion"
             role="button"
@@ -152,9 +150,12 @@ class Header extends Component {
           <Link className="btn btn-primary ml-1" to="/Registrate" role="button">
             Registrate
           </Link>
+          </div>
 
-          <div className="btn-group">
-            <button type="button" class="btn btn-danger">
+          
+
+          <div className="btn-group sm-2 m-3">
+            <button type="button" class="btn btn-danger sm2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"

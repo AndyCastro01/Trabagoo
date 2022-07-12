@@ -16,7 +16,7 @@ class Blog extends Component {
   render() {
     return (
       <div>
-        <Hero header="Mexzon Blog" />
+        <Hero header="Trabago" />
         <BrowserRouter>
         <div>
           <NavBar />

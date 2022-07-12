@@ -1,19 +1,10 @@
-.verticalLine {
-    display: flex;
-    
-    border-left: 2px solid rgb(51, 49, 51);
-    height: 500px;
-    position: absolute;
-    left: 13%;
-    margin-left: -3px;
-    top: 70px;
-  }
+  /*Linea de estilo sobre posicionamiento de el menu de perfil*/
   
-.barIz{
-   margin-top: 60px;
-   margin-left: 10px;
-    width: 150px;
-}
+  .barIz{
+    margin-top: 0px;
+    margin-left: 10px;
+     width: 150px;
+ }
 
 .Letras{
     margin-top: -350px;
@@ -22,40 +13,21 @@
 
 .text{
     margin-left: 200px;
+    color: #fcfcfc;
 }
-
-.mish .Cat{
-    margin-top: -200px;
-    margin-left: 1000px;
-    width: 350px;
-   height: 350px;
-}
-
-.mish .pc{
-    margin-top: -200px;
-    margin-left: 200px;
-    width: 150px;
-   height: 150px;
-}
-
-.mish .targeta{
-    margin-top: -200px;
-    margin-left: 100px;
-    width: 150px;
-   height: 150px;
-}
-
-.mish .escudo{
-    margin-top: -250px;
-    margin-left: 750px;
-    width: 150px;
-   height: 150px;
+.text2{
+    color: white;
 }
 
 
-.TablitaPed{
-margin-top: 0px;
-margin-left: 200px;
+.bt-offcanvas{
+    margin-top: -2200px;
+    margin-left: 10px;
+     width: 150px;
 }
-
-
+.offcanvas{
+    background: linear-gradient(to right, #4ef67d,#cf3a3a);
+}
+.sizeletra{
+    font-size: 20px;
+}

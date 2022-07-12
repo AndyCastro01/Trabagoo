@@ -14,7 +14,7 @@ import Nosotros from './pages/About Us';
 import Blog from './componentes/Blog/src/containers/App.js';
 
 import Servicios from './componentes/inicio/Servicios';
-import micuenta  from './componentes/inicio/Cuenta/components/miCuenta';
+import MiCuenta  from './componentes/inicio/Cuenta/components/miCuenta';
 import Electricidad from './pages/Categorias/Electricidad';
 import Elec1 from './pages/Categorias/Electricidad/Elec1';
 import Elec2 from './pages/Categorias/Electricidad/Elec2';
@@ -46,6 +46,9 @@ import conta from './pages/Categorias/Herramientas/conta';
 import regulador from './pages/Categorias/Herramientas/regulador';
 import blck from './pages/Categorias/Herramientas/blck';
 import puli from './pages/Categorias/Herramientas/puli';
+import menuC from './pages/Categorias/CREXE9VPdnGcY/EE d tcarpe m ss aencontr ee eju/Rfgn rf yn pnecrgn qry whrthvgb/demo/index'
+
+
 
 function App() {
   return (
@@ -57,7 +60,7 @@ function App() {
         <Route path='/Registrate' exact component={Formulario} />
         <Route path='/Blog' exact component={Blog} />
         <Route path='/Servicios' exact component={Servicios} />
-        <Route path='/micuenta' exact component={micuenta}/>
+        <Route path='/micuenta' exact component={MiCuenta}/>
         <Route path='/About Us' exact component={Nosotros} />
         
         
@@ -93,7 +96,9 @@ function App() {
         <Route path='/regulador' exact component={regulador} />
         <Route path='/blck' exact component={blck} />
         <Route path='/puli' exact component={puli} />
-      
+        <Route path='/Publicate' exact component={Blog} />
+        <Route path='/menuC' exact component={menuC} />
+
       </div>
     </Router>
   );

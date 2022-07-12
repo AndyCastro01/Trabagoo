@@ -18,7 +18,7 @@ const Post = ({ title, body, id }) => {
     <Container>
       <h1>{title}</h1>
       <p>{body}</p>
-      <Link to={`/post/${id}`}>More</Link>
+      <Link to={`/post/${id}`}>Ver mas descripción</Link>
     </Container>
   );
 };

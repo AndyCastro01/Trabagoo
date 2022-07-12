@@ -89,7 +89,7 @@ function Elec1() {
                     <button
                       type="button"
                       className="btn btn-danger"
-                      onClick={() => Eliminar(persona.__id)}
+                      onClick={() => Eliminar(persona._id)}
                     >
                       Eliminar
                     </button>

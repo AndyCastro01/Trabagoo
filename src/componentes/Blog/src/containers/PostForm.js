@@ -41,16 +41,16 @@ class PostForm extends Component {
         <Input
           name="title"
           onChange={this.handleChange}
-          placeholder="title"
+          placeholder="Titulo de tu Trabajo"
           value={title}
         />
         <TextArea
           name="body"
           onChange={this.handleChange}
-          placeholder="body"
+          placeholder="Describe tu trabajo"
           value={body}
         />
-        <Button>Submit</Button>
+        <Button>Enviar</Button>
       </Form>
     );
   }

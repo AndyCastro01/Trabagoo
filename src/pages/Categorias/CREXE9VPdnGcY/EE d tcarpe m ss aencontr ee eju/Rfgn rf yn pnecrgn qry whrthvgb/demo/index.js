@@ -6,16 +6,16 @@ import './index.css'
 function menuC(){
 ReactDOM.render(
   <React.StrictMode>
-    <h1>react-simple-snake</h1>
+    <h1>Juego-simple-snake</h1>
     <div className="textWrapper">
       <p className="subTitle">
       <a href="https://www.npmjs.com/package/react-simple-snake" target="_blank" rel="noopener noreferrer">NPM</a> -
       <a href="https://github.com/MaelDrapier/react-simple-snake" target="_blank" rel="noopener noreferrer"> Github</a>
       </p>
-      <p id="instructions">Use the arrow keys or W/A/S/D to play</p>
-      <p className="subTitle">A simple snake game created with the
+      <p id="instructions">Usa las flechas del teclado o W/A/S/D para Jugar</p>
+      <p className="subTitle">Un simple snake game creado con
       <a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer"> React </a>
-      JavaScript library</p>
+      la libreria de JavaScript</p>
     </div>
     <SnakeGame />
   </React.StrictMode>,

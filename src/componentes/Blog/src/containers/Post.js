@@ -36,7 +36,7 @@ class Post extends Component {
       'loading...'
       :
       <div>
-        <Link to='/'>Back</Link>
+        <Link to='/'>Regresar</Link>
         <h1>{title}</h1>
         <p>{body}</p>
       </div>

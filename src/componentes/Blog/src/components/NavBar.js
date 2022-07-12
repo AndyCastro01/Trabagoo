@@ -22,8 +22,8 @@ const Container = styled.div`
 const NavBar = () => {
   return (
     <Container>
-      <StyledLink to="/">Home</StyledLink>
-      <StyledLink to="/create">Create</StyledLink>
+      <StyledLink to="/">Publicaciones</StyledLink>
+      <StyledLink to="/create">Crea tu oferta de Trabajo</StyledLink>
     </Container>
   );
 };
