@@ -1,0 +1,15 @@
+.profile {}
+.profile__avatar {
+  
+  border: 1px solid #ccc;
+  width: 150px;
+  height: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-border-radius: 60%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin-top: -210px;
+  margin-left: 10px;
+}

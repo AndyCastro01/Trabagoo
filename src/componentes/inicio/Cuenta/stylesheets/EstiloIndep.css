@@ -1,0 +1,28 @@
+  /*Linea de estilo sobre posicionamiento de el menu de perfil*/
+  
+  .barIz{
+    margin-top: 0px;
+    margin-left: 10px;
+     width: 150px;
+ }
+
+.Letras{
+    margin-top: -350px;
+    margin-left: 200px;
+}
+
+.text{
+    color: #000000;
+}
+.text2{
+    color: rgb(255, 255, 255);
+}
+
+
+
+.offcanvas{
+    background: linear-gradient(to right, #4ef67d,#cf3a3a);
+}
+.sizeletra{
+    font-size: 20px;
+}
