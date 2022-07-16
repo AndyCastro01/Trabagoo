@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import Axios from "../../../componentes/services/ConexionAxios";
+import { Toaster, toast } from 'react-hot-toast';
+
 
 function Elec1() {
   const [persona, setPersonas] = useState([]);
@@ -15,6 +17,13 @@ function Elec1() {
     if (window.confirm("¿Esta usted seguro de eliminar el dato?")) {
       await Axios.delete(`/persona/eliminar/${id}`);
       console.log("Datos eliminados correctamente");
+      toast.promise(
+        Consultar(),
+         {
+           loading: 'Eliminando Usuario...',
+           success: <b>Eliminado!</b>,
+         }
+       );
     }
 
     Consultar();
@@ -69,13 +78,13 @@ function Elec1() {
       </div>
 
       <div>
-        <div class="row">
+        <div class="container">
           {persona.map((persona, index) => {
             return (
-              <div class="col-lg-4 mb-4">
+              <div class="col-lg-4 m-1">
                 <center>
-                <div class="col-md-4 ">
-                  <img src="https://us.123rf.com/450wm/yaryhee/yaryhee1706/yaryhee170600146/81034980-electricista-trabajando-electric-potencia-poste-azul-cielo.jpg?ver=6" class="img-fluid rounded-start" alt="..." />
+                <div class="">
+                  <img src="https://us.123rf.com/450wm/yaryhee/yaryhee1706/yaryhee170600146/81034980-electricista-trabajando-electric-potencia-poste-azul-cielo.jpg?ver=6" class="img-fluid rounded-4" alt="..." />
                 </div>
                 </center>
                 <div class="card">

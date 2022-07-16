@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styleH.css";
+import { Toaster, toast } from 'react-hot-toast';
 
 import Axios from "../services/ConexionAxios";
 
@@ -23,6 +24,8 @@ function Formulario() {
     setValues({ ...values, [name]: value });
   };
 
+  
+
   //Crear metodo para guardar información
   const Guardar = async () => {
     Axios.post("/persona/guardar", {
@@ -35,7 +38,9 @@ function Formulario() {
       sexo: values.sexo,
       email: values.email,
     }).then(() => {
-      console.log('Registro guardado con exito');
+      console.log("Se guardaron los registros")
+      toast.success('Sus datos fueron guardados con exito!')
+      
     });
    setValues(variablesInicio);
   }
@@ -46,9 +51,9 @@ function Formulario() {
   };
 
   return (
-    <div className="formulario container-fluid p-4 fondo">
+    <div className="formulario p-4">
       <div className="card col-md-4 logBack">
-        <div class="llamada card-header text-center">Formulario de personas</div>
+        <div class="llamada card-header">Formulario de personas</div>
         <div class="card-body">
           <p class="card-text">
             <form className="colocar1" onSubmit={Enviar}>

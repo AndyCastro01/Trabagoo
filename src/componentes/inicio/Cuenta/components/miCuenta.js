@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/EstiloIndep.css";
 import Axios from "../../../../componentes/services/ConexionAxios";
-
+import { Link } from "react-router-dom";
 
 function MiCuenta() {
   const [persona, setPersonas] = useState([]);
@@ -27,63 +27,50 @@ function MiCuenta() {
 
   return (
     <div>
-      <div className="text " style={{ textalign: "center" }}>
-        <h1>
-          Hola Bienvenido<span class="badge bg-secondary">Usuario/a</span>
-        </h1>
-      </div>
-      <div>
-        <h3>
-          <p className="text">
-            Este es tu espacio aqui podras consultar tu información,
-          </p>
-          <p className="text">
-            Siente seguro de verificar, consultar y modificar tu información
-          </p>
-        </h3>
-      </div>
-
-      <div className="TablitaTrabaj ">
-        <h1 class="text2">
-          Aqui puedes ver una previsualización de tus Trabajadores contratados
-        </h1>
-        {persona.map((persona, index) => {
-          return (
-            <div>
-              <div class="card sm-4 m-3">
-                <tr>
-                  <div class="card-header">{persona.ocupacion}</div>
-                  <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{persona.nombre}</li>
-                    <li class="list-group-item">+52 {persona.telefono}</li>
-                    <li class="list-group-item">{persona.email}</li>
-                  </ul>
-                </tr>
-                <tr>
-                  <th>
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={() => Eliminar(persona._id)}
-                  >
-                    Eliminar
-                  </button>
-                  </th>
-                </tr>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              <div className="text">
+                <h1>
+                  Hola Bienvenido
+                  <span class="badge bg-secondary">Usuario/a</span>
+                </h1>
               </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div classname="Offcanvas">
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <div>
+                <h3>
+                  <p className="text">
+                    Este es tu espacio aqui podras consultar tu información,
+                  </p>
+                  <p className="text">
+                    Siente seguro de verificar, consultar y modificar tu
+                    información
+                  </p>
+                </h3>
+              </div>
+              <div classname="Offcanvas">
         <a
           class="btn btn-primary bt-offcanvas btn-lg"
           data-bs-toggle="offcanvas"
           href="#offcanvasExample"
           role="button"
           aria-controls="offcanvasExample"
-          
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -132,8 +119,8 @@ function MiCuenta() {
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    to="/Cuenta"
                     className="list-group-item list-group-item-action"
                   >
                     <svg
@@ -147,9 +134,9 @@ function MiCuenta() {
                       <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
                     </svg>{" "}
                     Perfil
-                  </a>
+                  </Link>
                 </li>
-                <a href="#" className="list-group-item list-group-item-action">
+                <Link to="/Contactos" className="list-group-item list-group-item-action">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -162,7 +149,7 @@ function MiCuenta() {
                     <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0h-7zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492V2.5z" />
                   </svg>{" "}
                   Contactos
-                </a>
+                </Link>
                 <a href="#" className="list-group-item list-group-item-action">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -180,6 +167,45 @@ function MiCuenta() {
             </div>
           </div>
         </div>
+      </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+     
+
+      <div className="TablitaTrabaj ">
+        <h1 class="text2">
+          Aqui puedes ver una previsualización de tus Trabajadores contratados
+        </h1>
+        {persona.map((persona, index) => {
+          return (
+            <div>
+              <div class="card sm-4 m-3">
+                <tr>
+                  <div class="card-header">{persona.ocupacion}</div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{persona.nombre}</li>
+                    <li class="list-group-item">+52 {persona.telefono}</li>
+                    <li class="list-group-item">{persona.email}</li>
+                  </ul>
+                </tr>
+                <tr>
+                  <th>
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => Eliminar(persona._id)}
+                    >
+                      Eliminar
+                    </button>
+                  </th>
+                </tr>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -12,19 +12,14 @@
 }
 
 .text{
-    margin-left: 200px;
-    color: #fcfcfc;
+    color: #000000;
 }
 .text2{
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
-.bt-offcanvas{
-    margin-top: -2200px;
-    margin-left: 10px;
-     width: 150px;
-}
+
 .offcanvas{
     background: linear-gradient(to right, #4ef67d,#cf3a3a);
 }

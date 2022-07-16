@@ -12,12 +12,6 @@
     color: white;
 }
 
-  /*neon effect*/
-  .tituele{
-    text-align:center;
-    font-size:60px;
-    margin:20px 0 20px 0;
-  }
   
   .atitu{
     text-decoration:none;
@@ -195,7 +189,3 @@
   font-size: 20px;
  }
 
- .card-text{
-    color:#f70404;
- }
- 
