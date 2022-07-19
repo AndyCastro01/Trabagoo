@@ -12,7 +12,7 @@ function home() {
       <br></br>
       <div className="">
         <p className="tituele">
-          <a className="atitu">Bienvenido a TrabaGo</a>
+          <a className="atitu">Bienvenido a TrabaGo</a><br></br>
         </p>
       </div>
       <div className="container-fluid ml-2">
@@ -126,7 +126,7 @@ function home() {
                   Buscamos plomero-electricista con experiencia para trabajos en
                   obra y mantenimientos para trabajo fijo.
                 </p>
-                <a href="/e" className="btn btn-outline-success">
+                <a href="/Plomeria" className="btn btn-outline-success">
                   Ir
                 </a>
               </div>
@@ -148,7 +148,7 @@ function home() {
                   mejor talento, queremos invitarle a participar en el proceso
                   de Reclutamiento como candidato para esta posición.
                 </p>
-                <a href="#" className="btn btn-outline-success">
+                <a href="Programador" className="btn btn-outline-success">
                   Ir
                 </a>
               </div>
@@ -174,7 +174,7 @@ function home() {
                   (Alarmas, Intrusión, CCTV, control de acceso, Detección de
                   Incendio), como es tubería, cableado, equipo y configuración.
                 </p>
-                <a href="" class="btn btn-outline-success">
+                <a href="Tecnico" class="btn btn-outline-success">
                   {" "}
                   Ir{" "}
                 </a>
@@ -223,7 +223,7 @@ function home() {
                   Videovigilancia CCTV IP, Control de Acceso, Alarma, Cerco
                   Electrico, Informático
                 </p>
-                <a href="#" className="btn btn-primary">
+                <a href="Tecnico" className="btn btn-primary">
                   Ir
                 </a>
               </div>
