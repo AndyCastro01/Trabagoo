@@ -1,8 +1,12 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import {LoginButton} from '../Formularios/login';
+import {LogoutButton} from '../Formularios/logout'
+import {useAuth0} from '@auth0/auth0-react'
 
-class Header extends Component {
-  render() {
+function Header (){
+  const {isAuthenticated} = useAuth0();
+
     return (
       <div className="container-fluid ml-1">
         {/* Comienza el codigo del NavBar */}
@@ -49,7 +53,7 @@ class Header extends Component {
                   data-toggle="dropdown"
                 >
                   Menu de categorías <span class="caret"></span>
-                </button>
+                  </button>
                 <ul className="dropdown-menu dropdown-menu-dark">
                   <li>
                     <a class="dropdown-item" href="Electricidad">
@@ -265,13 +269,22 @@ class Header extends Component {
             </div>
 
             {/* Botones para ir a registrarse o iniciar sesion */}
-            <Link
+            {/* <Link
               className="btn btn-primary ml-4"
               to="/iniciarSesion"
               role="button"
             >
               Iniciar Sesión
-            </Link>
+            </Link> */}
+
+            {isAuthenticated ? (
+              <>
+            <LogoutButton/>
+              </>
+            ):(
+              <LoginButton/>
+            )};
+
             <Link
               className="btn btn-primary ml-1"
               to="/Registrate"
@@ -298,6 +311,6 @@ class Header extends Component {
       </div>
     );
   }
-}
+
 
 export default Header;

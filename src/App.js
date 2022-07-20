@@ -16,7 +16,7 @@ import Electricidad from './pages/Categorias/Electricidad';
 import Elec1 from './pages/Categorias/Electricidad/Elec1';
 import Elec2 from './pages/Categorias/Electricidad/Elec2';
 import Elec3 from './pages/Categorias/Electricidad/Elec3';
-import infoCuenta from './componentes/inicio/Cuenta/components/infoCuenta';
+import infoCuenta from './componentes/inicio/Cuenta/components/infoCuenta'
 import infoContacto from './componentes/inicio/Cuenta/components/infoContacto';
 import {Toaster, toast} from 'react-hot-toast'
 import Plomeria from './pages/Categorias/Plomeria';
@@ -31,6 +31,11 @@ import Tec2 from './pages/Categorias/Tecnico/Tec2';
 import Mecanico from './pages/Categorias/Mecanico';
 import Me1 from './pages/Categorias/Mecanico/Me1';
 import Me2 from './pages/Categorias/Mecanico/Me2';
+
+
+
+
+
 function App() {
   return (
     <Router>
@@ -62,7 +67,6 @@ function App() {
         <Route path='/Mecanico' exact component={Mecanico} />
         <Route path='/Me1' exact component={Me1} />
         <Route path='/Me2' exact component={Me2} />
-        
       <Toaster/>
       </div>
     </Router>

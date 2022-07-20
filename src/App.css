@@ -816,3 +816,13 @@ a{
 .color-carta{
   background: linear-gradient(to right, #08aa3e,#f6f6f6,#ff0000);   width: 100%;
 }
+
+.fixCarr img {
+  width: 200px;
+  max-height: 500px;
+}
+
+.fixCarr{
+  width: 30%;
+height: 300px;
+}

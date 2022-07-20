@@ -5,6 +5,8 @@ import Button from '../components/Button';
 import Form from '../components/Form';
 import { postPost } from '../utils/api';
 
+import {toast, Toaster} from 'react-hot-toast'
+
 class PostForm extends Component {
   constructor(props) {
     super(props);
@@ -29,8 +31,25 @@ class PostForm extends Component {
     e.preventDefault();
 
     postPost(this.state)
-      .then((res) => console.log(res))
+      .then(()=>{
+        toast.success('Tu trabajo se ha guardado con exito puedes verificar en publicaciones', {
+          style: {
+            border: '1px solid #713200',
+            padding: '16px',
+            color: '#713200',
+          },
+          duration: 7000,
+          iconTheme: {
+            primary: '#713200',
+            secondary: '#FFFAEE',
+          },
+        });
+      })
       .catch((err) => console.log(err));
+
+      this.state.body="";
+      this.state.title="";
+
   }
 
   render() {

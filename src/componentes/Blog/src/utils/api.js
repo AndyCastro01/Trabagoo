@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://jsonplaceholder.typicode.com/posts'
+const BASE_URL = 'https://server-trabago.herokuapp.com/api/post/consultar'
+
+const enviar_URL = 'https://server-trabago.herokuapp.com/api/post/guardar'
 
 export function getPosts() {
   return axios.get(BASE_URL);
@@ -17,7 +19,7 @@ export function getPost(id) {
 export function postPost({ title, body }) {
   return axios({
     method: 'post',
-    url: BASE_URL,
+    url: enviar_URL,
     data: {
       title,
       body,

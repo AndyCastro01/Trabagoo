@@ -1,8 +1,28 @@
 import React from "react";
+import {Profile} from '../../../Formularios/Profile';
 
-function infoCuenta() {
+import {useAuth0} from '@auth0/auth0-react'
+
+function InfoCuenta() {
+  const {isAuthenticated} = useAuth0();
   return (
     <div>
+      <div className="text-center text-secondary" align="center">
+        {isAuthenticated ? (
+          <>
+          <Profile/>
+          </>
+        ):(
+          <div>
+            <p>
+              Aun no se ha indentificado porfavor loguese o resgistrese
+              en la pagina
+            </p>
+          </div>
+        )}
+      
+      </div>
+      
       <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
           <div class="card text-bg-primary">
@@ -121,4 +141,4 @@ function infoCuenta() {
   );
 }
 
-export default infoCuenta;
+export default InfoCuenta;
